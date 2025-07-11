@@ -49,6 +49,7 @@ if api_key:
                 ai_peptides = suggest_peptides_with_ai(
                     parsed['sequence'], parsed['residues'], provider, api_key, model_name, endpoint, num_peptides=num_peptides
                 )
+                st.write("DEBUG: ai_peptides output", ai_peptides)
                 for pep in ai_peptides:
                     st.markdown(f"### 🧬 Peptide: `{pep['sequence']}`")
                     st.markdown("**Properties:**")
